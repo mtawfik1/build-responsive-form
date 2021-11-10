@@ -3,11 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Form Layout E01</title>
+    <title>Responsive Form Layout </title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <header>
+        <div class="inner-container">
+            <h1>HTML5 Forms</h1>
+        </div>
+    </header>
+    <div class="inner-container">
+
+
+        <form action="#" method="post">
+            <!--
+                - Every input requires a label (label/input pair). The "for" and the "id" attribute always have to mach
+                - input elements are self-closing tags.
+            -->
+            <div>
+                <label for="text-field">Generic Text Field</label>
+                <input id="text-field" name="name-field" type="text" placeholder="First &Last Name"/>
+            </div>
+            <!--Email output -->
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="John.do@example.ca"/>
+            </div>
+            <!--using email type attribute is better than using text. When the user is inputing their email the browser will look for the '@' and the 'xxx'-->
+
+            <!--Phone output -->
+            <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone"  placeholder="Phone #" max length="10"/>
+            </div>
+
+            <!--URL-->
+            <div>
+                <label for="website">Website</label>
+                <input type="url" id="website" name="website"  placeholder="please start your website http:// or https://" />
+                <!-- the url must start with hhtp:// or https:// to be valide input entry -->
+            </div>
+
+            <!--password-->
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="pass"  placeholder="Enter Password"/>
+            </div>
+
+            <!--range slide-->
+            <div>
+                <label for="range">Range</label>
+                <input type="range" id="range" name="range" min="0" max="10" step="1" value="0"/>
+                <!-- 
+                    value = is default starting point
+                    step = allows for graduation of points.
+                -->
+            </div>
+
+             <!--color selector-->
+             <div>
+                <label for="colour">Colour Selector</label>
+                <input type="color" id="colour" name="colour" value="#0de987"/>
+            </div>
+
+            <!--fieldsets are used to group form controls together or create form sections. The legend element is the caption of the grouping-->
+           <fieldset>
+               <legend>Radio Button Field</legend>
+               <!--radio buttons must share the same name attribute value to be connected-->
+               <div>
+                   <input type="radio" id="hamsters" name="animals" value="hamsters" checked/>
+                   <label for="hamsters">🐹 Hamsters</label>
+               </div>
+               <div>
+                <input type="radio" id="dogs" name="animals" value="dogs"/>
+                <label for="dogs">🐕 Dogs</label>
+            </div>
+            <div>
+                <input type="radio" id="crocodile" name="animals" value="crocodile" disabled/>
+                <label for="crocodile">🐊 Crocodile </label>
+            </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Checkbox Field</legend>
+                <!-- checkboxes allow for multiple selections.
+                using the-->
+                <div>
+                    <input type="checkbox" id="spiders" name="insects" value="Spiders" />
+                    <label for="spiders">🕷 Spiders</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="scorpion" name="insects" value="Scorpion" checked/>
+                    <label for="scorpion">🦂 Scorpion</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="praying-mantis" name="insects" value="Praying Mantis" />
+                    <label for="praying-mantis">🐛  Praying Mantis</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dropdown Select Options</legend>
+                <div>
+                    <!-- Seelct Menu <dropdown menu> has some unique attributes  as
+                        -multiple- allows for multiple selections
+                        -size - allowing you to show more than one option
+                     -->
+                    <label for="select-field">Select an Option</label>
+                    <select multiple size="2" id="select-field" name="select-field">
+                        <option value="">Please Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </fieldset>
+            <!--text area-->
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Message"></textarea> <!--col="30" rows="10"-->
+            </div>
+
+            <!--Submit-->
+            <div>
+                <input type="submit" value="Send" name="submit"/>
+               
+            </div>
+
+            <!-- 
+                 <button type="submit" name="submit">Send</button>
+                 button element behaves differently in different browsers and can submit a variation of results whereas the input element works and behaves the same in all browsers.
+                 https://dev.to/anshulnautiyal/input-type-v-s-button-type-part-1-4mn6
+            -->
+        </form>
+    </div>
 </body>
 </html>

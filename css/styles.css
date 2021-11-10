@@ -1,2 +1,84 @@
 /* CSS Variables - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
+
+html {
+    font-size: 62.5%;
+    color: #222;
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+.inner-container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+/******* Styling the form *********/
+
+/** remove the defaults of the fieldset*/
+fieldset {
+    border:0;
+    margin:0;
+    padding: 0;
+}
+
+form {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+}
+
+input,
+select,
+textarea {
+    width: 60rem;
+}
+
+form div,
+fieldset {
+    margin-bottom: 3rem;
+}
+
+/** targets the divs within the fieldset only **/
+fieldset div {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-width: 60rem;
+    max-width: 60rem;
+    min-height: 8rem;
+    
+}
+
+/*** target only the radio and checkboxes **/
+
+input[type=radio],
+input[type=checkbox] {
+    /** set the width back to the initial default state**/
+    width: initial; /*or auto*/
+}
+
+/*** to place the labels be side by side radio and checkboxes u can use flex or display inline **/
+
+label[for="hamsters"],
+label[for="dogs"],
+label[for="crocodile"],
+label[for="spiders"],
+label[for="scorpion"],
+label[for=praying-mantis] {
+    display:inline-block;
+    margin-left: 0.5rem;
+}
