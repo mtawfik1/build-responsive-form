@@ -82,3 +82,22 @@ label[for=praying-mantis] {
     display:inline-block;
     margin-left: 0.5rem;
 }
+
+/** target the submit button**/
+input[type=submit] {
+    width: 40rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: peachpuff;
+    transition: background 0.3s ease-in-out;
+}
+
+input[type=submit]:hover {
+    background-color: darkblue;
+    color: peachpuff;
+
+}
